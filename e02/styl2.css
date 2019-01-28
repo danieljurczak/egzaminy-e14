@@ -1,0 +1,55 @@
+html {
+    font-family: Georgia;
+}
+header {
+    background-color: #824555;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+#left, #center {
+    background-color: #A26475;
+    color: white;
+    width:30%;
+    height: 300px;
+}
+#right {
+    background-color: #A26475;
+    color:white;
+    width:40%;
+    height:300px;
+    text-align: right;
+}
+main {
+    background-color: #824555;
+    color:white;
+    text-align:center;
+    padding: 20px;
+}
+table, td, th {
+    border: 1px solid #69293A;
+    padding: 7px;
+    margin: 0px;
+}
+ol {
+    list-style-type: square;
+}
+button:first-of-type {
+    background-color: red;
+    width:20px;
+    height:20px;
+}
+button:nth-of-type(2){
+    background-color: green;
+    width:20px;
+    height:20px;
+}
+button:last-of-type{
+    background-color: blue;
+    width:20px;
+    height:20px;
+}
+#panel {
+    display:flex;
+    flex-direction: row;
+}

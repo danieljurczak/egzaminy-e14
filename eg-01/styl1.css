@@ -1,0 +1,47 @@
+* {
+    font-family: Helvetica;
+
+}
+#left {
+    background-color: Navy;
+    color: white;
+    height: 700px;
+    width:25%;
+    float:left;
+}
+header {
+    background-color: royalblue;
+    height: 100px;
+    width: 75%;
+    text-align: center;
+    float: right;
+}
+main {
+    background-color: steelblue;
+    height: 300px;
+    width: 75%;
+    float: right;
+}
+#right {
+    background-color: royalblue;
+    height: 300px;
+    width:75%;
+    text-align: center;
+    float: right;
+}
+footer {
+    background-color: steelblue;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+}
+h1 {
+    letter-spacing: 5px;
+}
+form {
+    margin: 30px;
+    line-height: 3;
+}
+form:hover {
+    background-color: deepskyblue;
+}

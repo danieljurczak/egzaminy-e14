@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formatowanie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <h1>Formatowanie dokumentów</h1>
+    </header>
+    <div id="top">
+
+    </div>
+    <div id="panel">
+        <div id="left">
+            <h2>Przykład listy - hobby</h2>
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka
+                    <ol>
+                        <li>góry</li>
+                        <li>jeziora</li>
+                        <li>na rowerze</li>
+                    </ol>
+                </li>
+                <li>ksiązki</li>
+            </ul>
+        </div>
+        <div id="center">
+            <h2>Przykład tabeli - rozkład dnia</h2>
+            <table>
+                <tr>
+                    <th>
+                        Pora dnia
+                    </th>
+                    <th>
+                        obowiązek
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        rano
+                    </td>
+                    <td>
+                        nauka
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        południe
+                    </td>
+                    <td>
+                        zajecia dodatkowe
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        popołudnie
+                    </td>
+                    <td rowspan="2">
+                        moje hobby
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        wieczór
+                    </td>
+                </tr>               
+            </table>
+        </div>
+        <div id="right">
+            <img src="tekst.png" alt="technologia web">
+        </div>
+    </div>
+    <main>
+        <p>
+            Podaj rozmiar tekstu w procentach: 
+            <input type="number" id="procent">%
+        </p>
+        <p>
+            <select id="styl">
+                <option value="normal">prosty</option>
+                <option value="italic">kursywa</option>
+            </select>
+        </p>
+        <p>
+            Jakim kolorem sformatować tekst? Wybierz przycisk <br/>
+            <button onclick="zmiana('red')"></button>
+            <button onclick="zmiana('green')"></button>
+            <button onclick="zmiana('blue')"></button>
+        </p>
+        <p id="tekst">
+            To jest przykład paragrafu, który moze być dowolnie formatowany przez JavaScript
+        </p>
+    </main>
+    <footer>
+        <p>Formatowaniem tekstu zajmował się: <i>PESEL</i></p>
+        <a href="http://formatowanie.pl" target="blank">Odwiedź takze</a>
+
+    </footer>
+    <script>
+        function zmiana(color) {
+            var procenty = document.getElementById('procent').value;
+            var styl = document.getElementById('styl').value;
+            var tekst = document.getElementById('tekst');
+            tekst.style['font-size'] = procenty + '%';
+            tekst.style['font-style'] = styl;
+            tekst.style['color'] = color;
+        }
+    </script>
+</body>
+</html>
