@@ -1,0 +1,4 @@
+Kwerenda 1: SELECT nazwa, opis, cena FROM podzespoly WHERE typy_id=1
+Kwerenda 2: SELECT nazwa, id FROM podzespoly WHERE cena<400 AND dostepnosc=1
+Kwerenda 3: SELECT podzespoly.nazwa, typy.kategoria FROM podzespoly, typy WHERE podzespoly.typy_id=1 AND typy.id=podzespoly.typy_id
+Kwerenda 4: ALTER TABLE typy ADD opis TEXT;
