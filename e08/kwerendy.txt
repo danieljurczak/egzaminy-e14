@@ -1,0 +1,4 @@
+Kwerenda 1: SELECT nazwa, dostepnosc, cena FROM podzespoly WHERE producenci_id=5
+Kwerenda 2: SELECT opis, id FROM podzespoly WHERE dostepnosc=0 AND (producenci_id=5 OR producenci_id=1)
+Kwerenda 3: SELECT podzespoly.opis, podzespoly.cena, producenci.nazwa FROM podzespoly INNER JOIN producenci ON podzespoly.producenci_id = producenci.id
+Kwerenda 4: ALTER TABLE producenci ADD priorytet INT
