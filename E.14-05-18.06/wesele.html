@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dom weselny</title>
+    <link rel="stylesheet" href="styl5.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" height="70px">
+        Dom Weselny zorganizuje wesele za Ciebie
+        <img src="logo.png" height="70px">    
+
+    </header>
+    <div id="top">
+        <div id="left">
+            <h2>
+                Dom Weselny
+            </h2>
+            <p>
+                ul. Przemysłowa 5
+            </p>
+            <p>
+                Kalisz
+            </p>
+            <p>
+                <a href="logo.png">Pobierz obraz</a>
+            </p>
+        </div>
+        <div id="center">
+            <h2>
+                Oferujemy
+            </h2>
+            <ol>
+                <li>
+                    Wesela
+                </li>
+                <li>
+                    Bankiety
+                </li>
+                <li>
+                    Konferencje
+                </li>
+            </ol>
+        </div>
+        <div id="right">
+            <p>
+                <a href="regulamin.txt">czytaj regulamin</a>
+            </p>
+        </div>
+    </div>
+    <div id="bottom">
+        <h2>
+            Ile bedzie kosztowało moje wesele?
+        </h2>
+        Podaj liczbe gości: <input type="number" name="liczba_gosci" id="liczba_gosci"><br/>
+        <input type="checkbox" name="poprawiny" id="poprawiny"> Wesele z poprawinami?<br/>
+        <button type="submit" onclick="oblicz()">Oblicz koszt</button>
+        <p id="wynik">
+
+        </p>
+    </div>
+    <footer>
+        Stronę internetową opracował <i>PESEL</i>
+    </footer>
+    <script>
+        function oblicz(){
+            var liczba_gosci = document.getElementById('liczba_gosci').value;
+            var poprawiny = document.getElementById('poprawiny').checked;
+            var wynik_wypisz = document.getElementById('wynik');
+            alert
+            var wynik = 0;
+            wynik = liczba_gosci * 100;
+            if (poprawiny==true){
+                wynik = wynik * 1.3;
+            }
+            wynik_wypisz.innerHTML = wynik;
+
+        }
+    </script>
+</body>
+</html>
