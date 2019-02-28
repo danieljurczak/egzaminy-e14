@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzeria Margherita</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <header>
+        <h2>
+            Najlepsza pizza w mieście
+        </h2>
+        <img src="logo.png" height="100px">
+    </header>
+    <section id="top">
+        <section id="left">
+            <p>
+                U nas zamówisz pizzę z dowozem
+            </p>
+            <a href="logo.png">Nasze logo</a>
+        </section>
+        <section id="center">
+            <h3>
+                Pizzeria Margherita
+            </h3>
+            <p>
+                ul. Botaniczna 4, Zielona Góra
+            </p>
+        </section>
+        <section id="right">
+            <h3>
+                Oferta
+            </h3>     
+            <ol>
+                <li>
+                    Pizza
+                </li>
+                <li>
+                    Lasagne
+                </li>
+                <li>
+                    Sałatki
+                </li>
+            </ol>   
+            <p>
+                <a href="Oferta.txt">Pobierz pełną ofertę</a>
+            </p>
+        </section>
+    </section>
+    <section id="bottom">
+        <h3>
+            Oblicz koszt dostawy
+        </h3>
+        <input type="checkbox" id="zielona_gora"> Jestem z Zielonej Góry
+        <p>
+            albo
+        </p>
+        Podaj liczbę kilometrów od Zielonej Góry: <input type="number"id="kilometry">
+        <br/>
+        <button type="submit" onclick="oblicz()">Oblicz</button>
+        <p id="wynik">
+
+        </p>
+    </section>
+    <footer>
+        Strone internetowa opracował <b>PESEL</b>
+    </footer>
+    <script>
+        function oblicz() {
+            var koszt_dostawy = 0;
+            var zielona_gora = document.getElementById('zielona_gora').checked;
+            var kilometry = document.getElementById('kilometry').value;
+            var wynik = document.getElementById('wynik');
+            if (zielona_gora == true ){
+                wynik.innerHTML = "Dowieziemy twoją pizzę za darmo";
+            }
+            else {
+                koszt_dostawy = kilometry * 2;
+                wynik.innerHTML = "Dowóz będzie Cię kosztował " + koszt_dostawy + " złotych";
+            }
+        }
+    </script>
+</body>
+</html>

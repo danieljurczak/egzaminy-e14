@@ -1,0 +1,47 @@
+header {
+    background-color: #4e885c;
+    color:orange;
+    text-align: center;
+    height:110px;
+}
+#top {
+    display:flex;
+}
+#left {
+    background-color: #72a37d;
+    width: 30%;
+    height: 300px;
+}
+#center {
+    background-image: url('pizza.png');
+    background-color: #a2c3a9;
+    width: 40%;
+    height: 300px;
+}
+#right{
+    background-color: #72a37d;
+    text-align: center;
+    width: 30%;
+    height:300px;
+}
+#bottom {
+    background-color: #a2c3a9;
+    text-align: center;
+    height: 250px;
+}
+footer {
+    background-color: #4e885c;
+    color: orange;
+}
+#right a {
+    background-color: orange;
+    color: green;
+    padding:15px;
+
+}
+#bottom h3 {
+    margin-top: 0;
+}
+ol {
+    list-style-position: inside;
+}
