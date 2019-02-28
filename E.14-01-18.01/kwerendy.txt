@@ -1,0 +1,4 @@
+Kwerenda 1: SELECT id, tytul, tresc FROM ogloszenie WHERE kategoria=1;
+Kwerenda 2: SELECT uzytkownik.telefon FROM uzytkownik INNER JOIN ogloszenie ON ogloszenie.uzytkownik_id = uzytkownik.id WHERE ogloszenie.id = 1;
+Kwerenda 3: CREATE USER 'moderator'@'localhost' IDENTIFIED BY 'qwerty';
+Kwerenda 4: GRANT SELECT, DELETE ON ogloszenia.ogloszenie TO 'moderator'@'localhost'
