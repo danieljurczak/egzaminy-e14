@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portal ogłoszeniowy</title>
+    <link rel="stylesheet" href="styl5.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Portal ogłoszeniowy
+        </h1>
+    </header>
+    <section id="panels">
+        <section id="one">
+            <img src="logo-male.png">
+        </section>
+        <section id="two">
+            <h3>
+                Adres
+            </h3>
+            <p>
+                ul. Morska 45 Gdynia
+            </p>
+        </section>
+        <section id="three">
+            <h3>
+                telefon
+            </h3>
+            <p>
+                601601601
+            </p>
+        </section>
+        <section id="four">
+            <h3>
+                email
+            </h3>
+            <p>
+                ogloszenia@poczta.pl
+            </p>
+        </section>
+    </section>
+    <main>
+        <section id="left">
+            <h2>
+                Ceny ogłoszeń
+            </h2>
+            <table>
+                <tr>
+                    <td>
+                        Liczba ogłoszeń
+                    </td>
+                    <td>
+                        Cena ogłoszenia
+                    </td>
+                    <td>
+                        Bonus
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1-50
+                    </td>
+                    <td>
+                        2 PLN
+                    </td>
+                    <td rowspan="2">
+                        Subskrypcja newslettera to upust 0,20 PLN na ogłoszenie
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        51 i więcej
+                    </td>
+                    <td>
+                        1 PLN
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="center">
+            <h2>
+                Witamy na stronie naszego portalu!
+            </h2>
+            <img src="logo-duze.png" alt="ogloszenia">
+        </section>
+        <section id="right">
+            <h2>
+                Ile kosztuje ogłoszenie?
+            </h2>
+            Podaj liczbę ogłoszeń: 
+            <input type="number" id="liczba_ogloszen"></br>
+            Policz upust na newsletter
+            <input type="checkbox" id="newsletter"></br>
+            <button type="submit" onclick="oblicz()">Oblicz</button>
+            <p id="wynik">
+
+            </p>
+        </section>
+    </main>
+    <footer>
+        Portal ogłoszeniowy opracował: PESEL
+    </footer>
+    <script>
+        function oblicz() {
+        var liczba_ogloszen = parseInt(document.getElementById("liczba_ogloszen").value);
+        var newsletter = document.getElementById("newsletter").checked;
+        var wynik = document.getElementById("wynik");
+        var wynik_liczba = 0;
+        if (liczba_ogloszen<=50){
+            wynik_liczba = liczba_ogloszen * 2;
+        }
+        else if (liczba_ogloszen>50) {
+            wynik_liczba = liczba_ogloszen *1;
+        } 
+        if (newsletter){
+            wynik_liczba = wynik_liczba - (liczba_ogloszen * 0.20);
+        }
+        wynik.innerHTML = "Koszt ogłoszeń "+wynik_liczba+" PLN" 
+        }
+    </script>
+</body>
+</html>
