@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Szkoła ponagimnazjalna</title>
+	<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+	<header>
+		<h1>
+			Projekt strony internetowej szkoły ponadgimnazjalnej
+		</h1>
+	</header>
+	<main>
+		<section id="left">
+			<table>
+				<tr>
+					<td>
+						Treść zapytania
+					</td>
+					<td>
+						Zrzut ekranu
+					</td>
+				</tr>
+				<tr>
+					<td>
+						INSERT INTO klasa (id, nazwa) VALUES ('5', '3a');
+					</td>
+					<td>
+						<img src="kwerenda1.jpg" alt="kwerenda1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						SELECT klasa.nazwa, AVG(uczen.Srednia_ocen) FROM klasa INNER JOIN uczen ON klasa.id = uczen.id_klasy GROUP BY klasa.nazwa
+					</td>
+					<td>
+						<img src="kwerenda2.jpg" alt="kwerenda2">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						CREATE USER 'Dyrektor'@'localhost' IDENTIFIED BY 'dyr_123'
+					</td>
+					<td>
+						<img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						GRANT ALL ON szkola.* TO 'Dyrektor'@'localhost'
+					</td>
+					<td>
+						<img src="uprawnienia.jpg" alt="uprawnienia">
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section id="right">
+			<h2>
+				Do pobrania
+			</h2>
+			<ul>
+				<li>
+					<a href="../baza/zapytania.txt">zapytania SQL</a>
+				</li>
+				<li>
+					<a href="../baza/szkola_nowa.sql">baza danych</a>
+				</li>
+			</ul>
+			<hr>
+			<h3>
+				Wyznaczanie najniższej średniej:
+			</h3>
+			<ul>
+				<li>
+					Polak <input type="text" id="polak">
+				</li>
+				<li>
+					Nowak <input type="text" id="nowak">
+				</li>
+				<li>
+					Rysik <input type="text" id="rysik">
+				</li>
+			</ul>
+			<button onclick="oblicz()">Wyznacz</button>
+			<h3>Najniższa średnia <span id="wynik"></span></h3>
+		</section>
+	</main>
+	<footer>
+		stronę wykonał: PESEL
+	</footer>
+	<script>
+	function oblicz() {
+		var polak = parseFloat(document.getElementById("polak").value);
+		var nowak = parseFloat(document.getElementById("nowak").value);
+		var rysik = parseFloat(document.getElementById("rysik").value);
+		var wynik = document.getElementById("wynik");
+		if (isNaN(polak) || isNaN(nowak) || isNaN(rysik)){
+			alert("Wpisz poprawne dane");
+		}
+		else {
+			var najn_srednia = Math.min(polak, nowak, rysik);
+			wynik.innerHTML = najn_srednia;
+		}
+		}
+	</script>
+</body>
+</html>

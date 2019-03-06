@@ -1,0 +1,52 @@
+a {
+	color: yellow;
+}
+header, footer, #right {
+	background-color: #5957a1;
+}
+#left {
+	background-color: #bbadcd;
+}
+header, footer {
+	text-align: center;
+}
+#right {
+	text-align: center;
+}
+* {
+	font-family: Arial;
+	color: white;
+}
+header {
+	padding:10px;
+}
+#left {
+	width: 65%;
+}
+#right {
+	width: 35%;
+}
+#left, #right {
+	height: 450px;
+}
+header {
+	height: 70px;
+}
+footer {
+	height: 50px;
+}
+hr {
+	border-color: yellow;
+}
+#right li {
+	list-style-type: square;
+}
+td {
+	border:1px dashed black;
+}
+#left {
+	overflow:scroll;
+}
+main {
+	display:flex;
+}
