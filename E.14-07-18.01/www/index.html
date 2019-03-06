@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Szkoła ponagimnazjalna</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>
+            Projekt strony internetowej skzoły ponadgimnazjalnej
+        </h2>
+    </header>
+    <main>
+        <section id="left">
+            <h3>
+                Do pobrania
+            </h3>
+            <ul>
+                <li>
+                    <a href="../baza/zapytania.txt">zapytania SQL</a>
+                </li>
+                <li>
+                    <a href="../baza/szkola_nowa.sql">baza danych</a>
+                </li>
+            </ul>
+        </section>
+        <section id="center">
+            <table>
+                <tr>
+                    <td>
+                        Treść zapytania
+                    </td>
+                    <td>
+                        Zrzut ekranu
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        INSERT INTO `uczen` (`id`, `nazwisko`, `imie`, `id_klasy`) VALUES ('27', 'Jasny', 'Wiktoria', '1');
+                    </td>
+                    <td>
+                        <img src="kwerenda1.jpg" alt="kwerenda1.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        SELECT wychowawca.imie, wychowawca.nazwisko FROM wychowawca inner JOIN uczen ON wychowawca.id_klasy= uczen.id_klasy where uczen.nazwisko = "Markiewicz"
+                    </td>
+                    <td>
+                        <img src="kwerenda2.jpg" alt="kwerenda2.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CREATE USER 'Jan_Bogucki'@'localhost' IDENTIFIED BY 'jb_123'
+                    </td>
+                    <td>
+                        <img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        GRANT SELECT, INSERT, DROP ON szkola.uczen TO 'Jan_Bogucki'@'localhost'
+                    </td>
+                    <td>
+                        <img src="uprawnienia.jpg" alt="uprawnienia.jpg">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="right">
+            <h4>
+                Obliczanie średniej oceny
+            </h4>
+            <ul>
+                <li>
+                    Polak <input type="text" id="polak">
+                </li>
+                <li>
+                    Nowak <input type="text" id="nowak">
+                </li>
+                <li>
+                    Rysik <input type="text" id="rysik">
+                </li>
+            </ul>
+            <button onclick="oblicz()">oblicz</button>
+            <h4>Średnia ocena: <span id="wynik"></span></h4>
+        </section>
+    </main>
+    <footer>
+        <h5>
+            autor strony: PESEL
+        </h5>
+    </footer>
+    <script>
+        function oblicz() {
+        var polak = parseFloat(document.getElementById("polak").value);
+        var nowak = parseFloat(document.getElementById("nowak").value);
+        var rysik = parseFloat(document.getElementById("rysik").value);
+        var wynik = document.getElementById("wynik");
+        if (isNaN(polak) || isNaN(nowak) || isNaN(rysik)){
+            alert("Wpisz poprawne dane");
+        }
+        else {
+            var srednia = (polak + nowak + rysik)/3;
+            wynik.innerHTML = srednia;
+        }
+        }
+    </script>
+</body>
+</html>

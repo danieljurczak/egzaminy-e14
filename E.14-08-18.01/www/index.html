@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Szkoła ponadgimnazjalna</title>
+	<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+	<header>
+		<h1>
+			Projekt strony internetowej szkoły ponadgimnazjalnej
+		</h1>
+	</header>
+	<main>
+		<section id="left">
+			<h3>
+				Do pobrania
+			</h3>
+			<ul>
+				<li>
+					<a href="../baza/zapytania.txt">zapytania SQL</a>
+				</li>
+				<li>
+					<a href="../baza/szkola_nowa.sql">baza danych</a>
+				</li>
+			</ul>
+			<hr>
+			<h3>
+				Wyznaczanie najwyższej średniej:
+			</h3>
+			<ul>
+				<li>
+					Polak <input type="text" id="polak">
+				</li>
+				<li>
+					Nowak <input type="text" id="nowak">
+				</li>
+				<li>
+					Rysik <input type="text" id="rysik">
+				</li>
+			</ul>
+			<button onclick="oblicz()">Wyznacz</button>
+			<h3>Najwyższa średnia <span id="wynik"></span></h3>
+		</section>
+		<section id="right">
+			<table>
+				<tr>
+					<td>
+						Treść zapytania
+					</td>
+					<td>
+						Zrzut ekranu
+					</td>
+				</tr>
+				<tr>
+					<td>
+						INSERT INTO wychowawca VALUES(5,'Maciej','Stasiak','5');
+					</td>
+					<td>
+						<img src="kwerenda1.jpg" alt="kwerenda1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						SELECT uczen.nazwisko, uczen.imie FROM uczen INNER JOIN wychowawca ON uczen.id_klasy=wychowawca.id_klasy WHERE wychowawca.nazwisko="Michalska";
+					</td>
+					<td>
+						<img src="kwerenda2.jpg" alt="kwerenda2">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						CREATE USER 'K_Pietkiewicz'@'localhost' IDENTIFIED BY 'kp_123';
+					</td>
+					<td>
+						<img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						GRANT SELECT,INSERT ON uczen TO 'K_Pietkiewicz'@'localhost'; 
+					</td>
+					<td>
+						<img src="uprawnienia.jpg" alt="uprawnienia">
+					</td>
+				</tr>
+			</table>
+		</section>
+	</main>
+	<footer>
+		stronę wykonał: PESEL
+	</footer>
+	<script>
+	function oblicz() {
+        var polak = parseFloat(document.getElementById("polak").value);
+        var nowak = parseFloat(document.getElementById("nowak").value);
+        var rysik = parseFloat(document.getElementById("rysik").value);
+        var wynik = document.getElementById("wynik");
+        if (isNaN(polak) || isNaN(nowak) || isNaN(rysik)){
+            alert("Wpisz poprawne dane");
+        }
+        else {
+            var najw_srednia = Math.max(polak, nowak, rysik);
+			wynik.innerHTML = najw_srednia;
+        }
+        }
+	</script>
+</body>
+</html>

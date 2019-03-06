@@ -1,0 +1,48 @@
+a {
+    color: brown;
+}
+header, footer, #right, #left {
+    background-color: #ffb31c;
+}
+#center {
+    background-color: #ffcb71;
+}
+header, footer {
+    text-align: center;
+}
+#right {
+    text-align: right;
+}
+* {
+    font-family: Verdana;
+}
+#left, #right {
+    width: 20%;
+} 
+#center {
+    width: 60%;
+}
+#left, #center, #right {
+    height: 600px;
+}
+header {
+    height: 60px;
+}
+footer {
+    height: 30px;
+}
+li {
+    list-style-type: square;
+}
+td {
+    border: 1px solid black;
+}
+#center {
+    overflow: scroll;
+}
+main {
+    display:flex;
+}
+h5 {
+    margin:0;
+}

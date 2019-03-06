@@ -1,0 +1,4 @@
+Kwerenda 1. INSERT INTO `uczen` (`id`, `nazwisko`, `imie`, `id_klasy`) VALUES ('27', 'Jasny', 'Wiktoria', '1');
+Kwerenda 2. SELECT wychowawca.imie, wychowawca.nazwisko FROM wychowawca inner JOIN uczen ON wychowawca.id_klasy= uczen.id_klasy where uczen.nazwisko = "Markiewicz"
+Kwerenda 3. CREATE USER 'Jan_Bogucki'@'localhost' IDENTIFIED BY 'jb_123'
+Kwerenda 4. GRANT SELECT, INSERT, DROP ON szkola.uczen TO 'Jan_Bogucki'@'localhost'
