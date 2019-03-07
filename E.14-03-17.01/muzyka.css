@@ -1,0 +1,25 @@
+header {
+    background-color: #812f8d;
+    color: white;
+    font-size: 200%;
+    text-align: center;
+    padding: 10px;
+}
+#left {
+    background-color: #bb74c4;
+    color: white;
+    width:25%;
+    height:100%;
+    float:left;
+    height:calc(100vh - 188px);
+}
+#right {
+    width:75%;
+    float:left;
+}
+h2 {
+    text-align:center;
+}
+form {
+    padding: 20px;
+}

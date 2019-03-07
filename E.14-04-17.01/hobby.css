@@ -1,0 +1,26 @@
+header {
+    background-color: #9a6000;
+    color: white;
+    font-size: 180%;
+    text-align: center;
+    padding: 20px;
+}
+#left {
+    width:60%;
+    float:left;
+}
+#right {
+    float:left;
+    background-color: #c47a00;
+    color: white;
+    width: 40%;
+    height:calc(100vh - 192px);
+}
+h3 
+{
+	text-align: center;
+}
+ul
+{
+ margin: 10px;
+}
