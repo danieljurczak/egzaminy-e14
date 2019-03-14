@@ -1,0 +1,28 @@
+header {
+    background-color: rgb(48, 27, 94);
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    height: 80px;
+}
+aside {
+    background-color: rgb(127,118, 158);
+    width: 25%;
+    height:500px;
+    float: left;
+    color: white;
+}
+main {
+    background-color: rgb(220,220,220);
+    width: 75%;
+    height:500px;
+    font-size: 110%;
+    float:left;
+}
+footer {
+    clear:both;
+    background-color: rgb(127,118, 158);
+    color:white;
+    text-align: center;
+    height: 80px;
+}
