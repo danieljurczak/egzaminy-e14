@@ -1,0 +1,4 @@
+Kwerenda 1: SELECT id, imie, nazwisko, email from uzytkownik WHERE id<4;
+Kwerenda 2: SELECT ogloszenie.tytul FROM ogloszenie WHERE ogloszenie.uzytkownik_id=1
+Kwerenda 3: CREATE USER 'admin'@'localhost' IDENTIFIED BY 'zaq1@';
+Kwerenda 4: GRANT SELECT, DELETE, UPDATE ON ogloszenia.uzytkownik TO 'admin'@'localhost';

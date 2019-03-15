@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj Użytkownika</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h2>
+            Rejestracja użytkownika
+        </h2>
+    </header>
+    <main>
+        <section id="left">
+            <h3>
+                Wpisz swoje dane
+            </h3>
+            <form action="dodajDane.php" method="POST">
+                Imię <br/>
+                <input type="text" name="imie"><br/>
+                Nazwisko <br/>
+                <input type="text" name="nazwisko" size="40"><br/>
+                Telefon<br/>
+                <input type="tel" name="telefon"><br/>
+                Email<br/>
+                <input type="email" name="email" size="40"><br/></br>
+                <button type="reset">WYCZYŚĆ</button>
+                <button type="submit">WYŚLIJ</button>
+            </form>
+        </section>
+        <section id="right">
+            <img src="ksiazki.jpg" alt="sprzedaj ksiażkę"></br>
+            <a href="Kwerendy.txt">kwerenedy SQL</a>
+            <h3>
+                Kategorie
+            </h3>
+            <ul>
+                <li>
+                    Książki
+                </li>
+                <li>
+                    Muzyka
+                </li>
+                <li>
+                    Film
+                </li>
+            </ul>
+            <h3>
+                Podkategorie
+            </h3>
+            <ol>
+                <li>
+                    Biografia
+                </li>
+                <li>
+                    Kryminał
+                </li>
+                <li>
+                    Komiks
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        Portal internetowy opracował PESEL
+    </footer>
+</body>
+</html>

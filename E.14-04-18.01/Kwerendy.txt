@@ -1,0 +1,4 @@
+Kwerenda 1: INSERT INTO uzytkownik (email, imie, nazwisko, telefon) VALUES ('jolanta@poczta.pl', 'Joannna', 'Jasny', '600600600')
+Kwerenda 2: SELECT tytul, tresc, podkategoria FROM ogloszenie WHERE kategoria=1 AND uzytkownik_id=13;
+Kwerenda 3: CREATE USER 'jolanta'@'localhost' IDENTIFIED BY 'jol1@';
+Kwerenda 4: GRANT SELECT, UPDATE ON ogloszenia.uzytkownik TO 'jolanta'@'localhost'
