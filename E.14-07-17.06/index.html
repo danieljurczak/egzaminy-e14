@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="left">
+<head>
+	<meta charset="utf-8">
+	<title>Kup mieszkanie</title>
+	<link rel="stylesheet" type="text/css" href="agencja.css">
+	<script type="text/javascript">
+		function obliczanie()
+		{
+			var a= document.getElementById("num").value;
+			var b= document.getElementById("num2").value;
+			var suma=a*4000 + b*2000 + 2000;
+			var bezkafelkow= suma - 2000;
+			if (document.getElementById("check").checked==true) 
+			{
+				
+				document.getElementById("wynik").innerHTML="Koszt mieszkania: "+ suma + "zł";
+			}
+			else if (document.getElementById("check").checked==false)
+			 {
+			 	document.getElementById("wynik").innerHTML="Koszt mieszkania: "+ bezkafelkow + "zł";
+			 }
+		}
+	</script>
+</head>
+<body>
+	<section id="left">
+		<h1>AGENCJA NIERUCHOMOŚCI</h1>
+		<h3>OFERUJEMY</h3>
+		<ol>
+			<li>Nowe mieszkania</li>
+			<li>Domy w naszym mieście</li>
+			<li>Domy w okolicy</li>
+		</ol>
+		<h3>NASI PRACOWNICY</h3>
+	<table>
+		<tr>
+			<td rowspan="3">Jan Nowak <br> Prezes</td>
+			<td>Anna Kowalska</td>
+		</tr> 
+		<tr>
+			<td>Katarzyna Nowakowska</td>
+		</tr>
+		<tr>
+			<td>Krzysztof Kowalewski</td>
+		</tr>
+	</table>
+	</section>
+	<section id="right">
+		<h1>KALKULATOR CENY MIESZKANIA</h1>
+		Podaj metraż mieszkania w m<sup>2</sup> <br> 
+		<input type="number" id="num"> <br> <br>
+		Liczba pokoi z zamontowanym okablowaniem sieciowym <br>
+		<input type="number" id="num2"> <br> <br>
+		<input type="checkbox" id="check">Kafelki w łazience? <br> <br>
+		<input type="submit" value="OBLICZ" id="przycisk" onclick="obliczanie()">
+		<p id="wynik"></p>
+	</section>
+	<footer>
+		<p>Autor strony:PESEL<img src="logo.png" alt="nieruchomości"></p>
+		
+	</footer>
+
+</body>
+</html>

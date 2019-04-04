@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Remonty mieszkań</title>
+	<link rel="stylesheet" type="text/css" href="remont.css">
+	<script type="text/javascript">
+		function obliczanie()
+		{
+			var a= document.getElementById("num").value;
+			if (document.getElementById("plytki").checked==true)
+			 {
+			 	document.getElementById("wynik").innerHTML="Koszt malowania: " + a*70 + "zł";
+			 }
+			 else if (document.getElementById("plytki2").checked==true) 
+			 {
+			 	document.getElementById("wynik").innerHTML="Koszt malowania: " + a*80 + "zł";
+			 }
+			 else
+			 {
+			 	document.getElementById("wynik").innerHTML="Wprowadź dane";
+			 }
+
+		}
+	</script>
+</head>
+<body>
+	<section class="menu">
+		<img src="logotyp.png">
+	</section>
+	<section class="menu">
+		<a href="index.html">O FIRMIE</a>
+	</section>
+	<section class="menu">
+		<a href="adres.html">ADRES</a>
+	</section>
+	<section class="menu">
+		<a href="policz.html">POLICZ</a>
+	</section>
+	<section class="menu">
+		<a href="http://www.jakremontowac.pl/" target="_blank">LINKI</a>
+	</section>
+	<section id="bg">
+		<h1>Kafelkowanie łazienki</h1>
+		<p>powierzchnia w m2: <input type="number" id="num"></p> <br>
+		<input type="radio" id="plytki">Płytki 20 x 20cm <input type="radio" id="plytki2"> Płytki 25 x 12 cm <br> <br>
+		<input type="submit" value="PRZELICZ" id="przycisk" onclick="obliczanie()">
+		<p id="wynik"></p>
+
+	</section>
+
+	<footer>
+		<p>Autor strony:PESEL</p>
+	</footer>
+
+</body>
+</html> 
