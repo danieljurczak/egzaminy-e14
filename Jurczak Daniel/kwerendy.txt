@@ -1,0 +1,8 @@
+Zapytanie 1: SELECT miejsce, ilosc_dni, koszt, transport FROM wycieczki ORDER BY(ilosc_dni) DESC;
+Zapytanie 2: SELECT nazwisko, imie, adres FROM klient WHERE adres='Radom' OR adres='Pionki' ORDER BY(adres);
+Zapytanie 3: SELECT klient.imie, klient.nazwisko, wycieczki.miejsce, wycieczki.koszt FROM wycieczki, klient INNER JOIN wyjazd ON klient.id = wyjazd.klient_id WHERE wycieczki.koszt > 400 AND wycieczki.transport='samolot' LIMIT 10
+Zapytanie 4: SELECT klient.imie, klient.nazwisko, wycieczki.miejsce, wycieczki.id FROM wycieczki, klient INNER JOIN wyjazd ON klient.id = wyjazd.klient_id WHERE wycieczki.miejsce='Praga'
+Zapytanie 5: INSERT INTO wycieczki(ilosc_dni, koszt, miejsce, transport) VALUES (4, 600, 'Praga', 'samolot')
+Zapytanie 6: CREATE USER 'Kierownik'@'localhost' IDENTIFIED BY 'kierownik';
+            GRANT ALL ON BIURO_POLAN.* TO 'Kierownik'@'localhost';
+Zapytanie 7: SELECT images, opis FROM foto;

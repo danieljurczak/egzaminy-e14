@@ -1,0 +1,4 @@
+Kwerenda 1: INSERT INTO ogloszenie (uzytkownik_id, kategoria, podkategoria, tytul, tresc) VALUES (1, 2, 0, 'Celine Dion', 'Sprzedam CD piosenkarki')
+Kwerenda 2: SELECT tytul, tresc FROM ogloszenie WHERE kategoria=1 AND podkategoria=13;
+Kwerenda 3: CREATE USER 'andrzej'@'localhost' IDENTIFIED BY 'xsw32';
+Kwerenda 4: GRANT SELECT, UPDATE ON ogloszenia.ogloszenie TO 'andrzej'@'localhost'

@@ -1,0 +1,35 @@
+header {
+    background-image: url('menu.jpg');
+    color:blue;
+    height:200px;
+}
+#left {
+    background-color: RGB(255,218,65);
+    text-align: center;
+    width:40%;
+    height:400px;
+}
+#center {
+    background-color: RGB(255, 226, 100);
+    text-align: center;
+    width: 30%;
+    height: 400px;
+}
+#right {
+    background-color: rgb(255,233,143);
+    text-align: center;
+    width: 40%;
+    height: 400px;
+}
+main {
+    display:flex;
+}
+footer {
+    background-color: rgb(255, 218, 65)
+}
+a {
+    color:green;
+}
+p {
+    font-size: 130%;
+}
